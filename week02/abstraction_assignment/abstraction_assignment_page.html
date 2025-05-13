@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W02 Assignment: Explain Abstraction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>W02 Assignment: Explain Abstraction</h1>
+    <h2>Question: What is abstraction and why is it important?</h2>
+    <p>
+        Abstraction in programming is the process of hiding complex details and showing only the essential parts of an object or function.
+        It allows developers to manage complexity by breaking down code into simpler, understandable components.
+        Instead of worrying about how something works internally, we focus on what it does.
+        This makes programs easier to read, write, and maintain.
+    </p>
+    <p>
+        One major benefit of abstraction is <strong>code reusability</strong>.
+        Once we write a function or class to perform a task, we can reuse it anywhere without rewriting the same logic.
+        It also helps reduce errors because the logic is written once and tested.
+    </p>
+    <p>
+        A real-world example of abstraction is a car.
+        You press the brake pedal to stop, but you don’t need to know how the hydraulic system works.
+        Similarly, in code, we call a function without knowing all its internal steps.
+    </p>
+    <p>
+        In my program, I used a function to calculate the total price of items in a shopping cart:
+    </p>
+    <pre><code>def calculate_total(prices):
+    return sum(prices)
+</code></pre>
+    <p>
+        I used this function like this:
+    </p>
+    <pre><code>cart = [12.99, 5.49, 3.50]
+total = calculate_total(cart)
+print(f"Your total is ${total}")
+</code></pre>
+    <p>
+        This function hides the logic of adding the prices.
+        It simplifies the program and keeps the main code clean and readable.
+        That’s the power of abstraction.
+    </p>
+</body>
+</html>
