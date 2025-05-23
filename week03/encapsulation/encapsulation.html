@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Encapsulation in Programming</title>
+</head>
+<body>
+  <h1>What is Encapsulation and Why is it Important?</h1>
+  
+  <p>
+    Encapsulation is a way of keeping data safe in a program. It means we put both the data and the code that works on the data inside one unit, which is called a class. It also means that we hide the data from outside the class and only let it be changed in a controlled way.
+  </p>
+
+  <p>
+    For example, if we have a balance in a bank account, we should not let anyone change the balance directly. Instead, we can create special methods to do it. This helps protect the data from wrong changes or mistakes.
+  </p>
+
+  <p>
+    One main benefit of encapsulation is <strong>data protection</strong>. It helps to avoid bugs and makes the program easier to fix or update later. Other parts of the program can only use the class through safe methods, not by changing things directly.
+  </p>
+
+  <h2>Real Example from My Program</h2>
+
+  <p>
+    In one of my Python programs, I created a class called <code>BankAccount</code>. I made the balance private and used methods to add or remove money.
+  </p>
+
+  <pre>
+class BankAccount:
+    def __init__(self, initial_balance):
+        self.__balance = initial_balance
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+
+    def get_balance(self):
+        return self.__balance
+  </pre>
+
+  <p>
+    In this code, <code>__balance</code> is private. No one can change it from outside the class. The only way to add or remove money is through the methods <code>deposit</code> and <code>withdraw</code>. This is a good example of encapsulation. It helps keep the data safe and makes sure the balance is always correct.
+  </p>
+
+  <p>
+    Encapsulation is important because it helps us write better, safer, and easier-to-understand code.
+  </p>
+</body>
+</html>
