@@ -1,12 +1,21 @@
-// Comment.cs
 public class Comment
 {
-    public string Name { get; set; }
-    public string Text { get; set; }
+    private string commenterName;
+    private string commentText;
 
-    public Comment(string name, string text)
+    public Comment(string commenterName, string commentText)
     {
-        Name = name;
-        Text = text;
+        this.commenterName = commenterName;
+        this.commentText = commentText;
+    }
+
+    public string GetCommenterName()
+    {
+        return commenterName;
+    }
+
+    public string GetCommentText()
+    {
+        return commentText;
     }
 }
