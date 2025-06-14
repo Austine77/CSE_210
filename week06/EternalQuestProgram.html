@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>W06 Assignment: Explain Polymorphism</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: hwb(240 0% 93% / 0.594);
+      text-align: center;
+    }
+    code {
+      background-color: #eaeaea;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background-color: #edeee7;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>W06 Assignment: Explain Polymorphism</h1>
+
+  <p><strong>Polymorphism</strong> is a core concept in object-oriented programming that allows objects of different classes to be treated as objects of a common superclass. It means that the same method name can behave differently depending on the object that is calling it. This makes code more flexible and easier to maintain.</p>
+
+  <p>A major <strong>benefit</strong> of polymorphism is that it allows you to write code that works on the <em>interface or base class</em>, while letting the <em>actual behavior</em> be defined in the <em>child classes</em>. This way, you can add new features or classes without changing the existing code structure, which follows the <strong>Open/Closed Principle</strong> (open for extension, closed for modification).</p>
+
+  <p>In my Week 06 program, I created a base class called <code>Shape</code>, which had a method called <code>get_area()</code>. Then, I created different shapes like <code>Rectangle</code>, <code>Circle</code>, and <code>Triangle</code>, all of which inherited from <code>Shape</code>. Each subclass provided its own version of the <code>get_area()</code> method.</p>
+
+  <p>Here’s an example of polymorphism in my program:</p>
+
+  <pre><code>class Shape:
+    def get_area(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        
+    def get_area(self):
+        return self.width * self.height
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+        
+    def get_area(self):
+        return 3.14 * self.radius * self.radius
+
+shapes = [Rectangle(4, 5), Circle(3)]
+
+for shape in shapes:
+    print(shape.get_area())
+</code></pre>
+
+  <p>Even though each shape has its own <code>get_area()</code> implementation, the loop calls the correct version depending on the object. This shows how <strong>polymorphism</strong> allows me to write <em>generalized code</em> that still works with specific behavior. It’s a powerful tool that I will definitely use in real-world projects.</p>
+</body>
+</html>
