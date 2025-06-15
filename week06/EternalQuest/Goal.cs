@@ -14,5 +14,8 @@ public abstract class Goal
     public abstract int RecordEvent();
     public abstract bool IsComplete();
     public abstract string GetStatus();
-    public abstract string GetSaveData();
+    public abstract string GetSaveString();
+    public string GetName() => _name;
+    public string GetDescription() => _description;
+    public int GetPoints() => _points;
 }

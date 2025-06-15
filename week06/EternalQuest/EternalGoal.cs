@@ -4,10 +4,7 @@ public class EternalGoal : Goal
         : base(name, description, points) { }
 
     public override int RecordEvent() => _points;
-
     public override bool IsComplete() => false;
-
-    public override string GetStatus() => $"[∞] {_name}";
-
-    public override string GetSaveData() => $"EternalGoal|{_name}|{_description}|{_points}";
+    public override string GetStatus() => "[∞]";
+    public override string GetSaveString() => $"EternalGoal|{_name}|{_description}|{_points}";
 }
