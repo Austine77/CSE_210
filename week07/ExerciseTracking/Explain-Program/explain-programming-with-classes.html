@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>W07 Assignment: Explain Programming with Classes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: #005a9c;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .meta {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>W07 Assignment: Explain Programming with Classes</h1>
+        <p class="meta">
+            <strong>Name:</strong> Sunday Prince Augustine<br>
+            <strong>Course:</strong> CSE 210 – Programming with Classes<br>
+            <strong>Assignment:</strong> W07 – Articulate: Explain Programming with Classes
+        </p>
+    </header>
+
+    <section>
+        <h2>1. Abstraction</h2>
+        <h3>Definition</h3>
+        <p>
+            Abstraction means focusing on the essential features of an object while hiding unnecessary details. It helps simplify complex systems by exposing only what is necessary in a specific context.
+        </p>
+        <h3>Usage in My Program</h3>
+        <p>
+            I used abstraction in my Exercise Tracking Program by creating an abstract base class called <code>Activity</code>. This class defined shared properties such as <code>Date</code> and <code>Minutes</code>, and abstract methods like <code>GetDistance()</code>, <code>GetSpeed()</code>, and <code>GetPace()</code> that were implemented in derived classes like <code>Running</code>, <code>Cycling</code>, and <code>Swimming</code>.
+        </p>
+        <h3>Benefit</h3>
+        <p>
+            Abstraction helped me separate the “what” from the “how.” This allowed me to extend the program more easily in the future. For example, I can add new types of activities (like rowing or hiking) by simply extending the <code>Activity</code> class without changing the core logic of the application.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Encapsulation</h2>
+        <h3>Definition</h3>
+        <p>
+            Encapsulation is the concept of keeping an object’s internal state private and exposing only what’s necessary through public methods. This protects data from being accessed or modified in unintended ways.
+        </p>
+        <h3>Usage in My Program</h3>
+        <p>
+            I made all class variables private, such as <code>_minutes</code>, <code>_laps</code>, and <code>_distance</code>. These were only accessed via public methods like <code>GetDistance()</code>. For example, in the <code>Swimming</code> class, the number of laps is stored privately and used only internally to calculate the distance.
+        </p>
+        <h3>Benefit</h3>
+        <p>
+            Encapsulation helped protect the program from bugs by limiting access to sensitive data. If I ever need to change how a value is calculated or validated, I can do so inside the class without affecting other parts of the program that use it.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Inheritance</h2>
+        <h3>Definition</h3>
+        <p>
+            Inheritance allows a class to use the attributes and methods of another class. It enables code reuse and lets us define general behavior in a base class while extending or customizing it in derived classes.
+        </p>
+        <h3>Usage in My Program</h3>
+        <p>
+            I created a base class <code>Activity</code> with common fields like <code>Date</code> and <code>Minutes</code>, and methods like <code>GetSummary()</code>. Then, I created derived classes for <code>Running</code>, <code>Cycling</code>, and <code>Swimming</code> that inherited from <code>Activity</code> and implemented their specific calculations.
+        </p>
+        <h3>Benefit</h3>
+        <p>
+            Inheritance allowed me to reuse code across all activity types. This made the program easier to maintain because I only had to define shared behavior once. If I later want to modify how summaries are formatted or add new features, I can do it in one place.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Polymorphism</h2>
+        <h3>Definition</h3>
+        <p>
+            Polymorphism allows us to treat objects of different classes in the same way as long as they share a common interface or base class. It typically involves method overriding, where derived classes provide their own versions of base class methods.
+        </p>
+        <h3>Usage in My Program</h3>
+        <p>
+            In my <code>Program.cs</code> file, I stored all types of activities (running, cycling, swimming) in a list of type <code>Activity</code>. Then, I looped through the list and called <code>GetSummary()</code> on each item. Even though the objects were different types, the correct method was called for each.
+        </p>
+        <h3>Benefit</h3>
+        <p>
+            Polymorphism made the program easier to extend. I didn’t have to write separate code to handle each activity type. I could work with all of them using the base class type, making the program simpler and more flexible for future features.
+        </p>
+    </section>
+
+    <section>
+        <h2>Final Thoughts</h2>
+        <p>
+            Understanding and applying these four principles—abstraction, encapsulation, inheritance, and polymorphism—has helped me write clean, organized, and scalable object-oriented programs. These concepts are not just academic; they make my code easier to understand, debug, and expand over time. I now feel more prepared to explain and use these ideas in a real-world software development job.
+        </p>
+    </section>
+</body>
+</html>
