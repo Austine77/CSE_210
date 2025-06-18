@@ -1,4 +1,24 @@
-# cse210-ww-student-template
-This is the starter code for students in the worldwide content version of CSE 210.
+# W07 Exercise Tracking Program
 
-This repository contains the starter code for many different projects. They are arranged folders by week. There is also an an empty sandbox project that can be used to play around with any concept you would like.
+This project is part of the Foundation #3 assignment for the BYU-Idaho Software Development course.
+
+## Features
+
+- Demonstrates object-oriented principles:
+  - Abstraction
+  - Encapsulation
+  - Inheritance
+  - Polymorphism
+- Tracks three types of activities:
+  - Running
+  - Cycling
+  - Swimming
+- Calculates and prints distance, speed, and pace summaries.
+
+## Run the Program
+
+Open the project in Visual Studio or VS Code with C# tools. Run `Program.cs`.
+
+## Screenshot
+
+![Screenshot](screenshot.png)
